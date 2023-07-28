@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 const { handleMongooseError } = require("../helpers");
+const emailRegexp = require("../utils/emailRegexp");
 const phoneRegexp = require("../utils/phoneRegexp");
 
 const contactSchema = new Schema(
@@ -10,6 +11,7 @@ const contactSchema = new Schema(
     },
     email: {
       type: String,
+      match: emailRegexp,
       required: [true, "Set email for contact"],
     },
     phone: {
@@ -20,6 +22,11 @@ const contactSchema = new Schema(
     favorite: {
       type: Boolean,
       default: false,
+    },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      require: true,
     },
   },
   { versionKey: false, timestamps: true }

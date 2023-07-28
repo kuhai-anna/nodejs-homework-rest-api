@@ -1,11 +1,12 @@
 const Joi = require("joi");
+const emailRegexp = require("../utils/emailRegexp");
 const phoneRegexp = require("../utils/phoneRegexp");
 
 const addSchema = Joi.object({
   name: Joi.string().min(2).max(30).required().messages({
     "any.required": "Field 'name' is missing",
   }),
-  email: Joi.string().email().required().messages({
+  email: Joi.string().pattern(emailRegexp).required().messages({
     "any.required": "Field 'email' is missing",
   }),
   phone: Joi.string().required().pattern(phoneRegexp).messages({
@@ -18,7 +19,7 @@ const addSchema = Joi.object({
 
 const updateSchema = Joi.object({
   name: Joi.string().min(2).max(30),
-  email: Joi.string().email(),
+  email: Joi.string().pattern(emailRegexp),
   phone: Joi.string().pattern(phoneRegexp).messages({
     "string.pattern.base":
       "Please enter a valid phone number. It must consist 10 digits and can begin with the code of Ukraine +380.",
