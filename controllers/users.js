@@ -8,16 +8,13 @@ const { HttpError, ctrlWrapper } = require("../helpers");
 const { SECRET_KEY } = process.env;
 
 const register = async (req, res, next) => {
-  // Для повернення унікального сповіщення (message)
   const { email, password } = req.body;
-  // Перевіряємо, чи є користувач з такою поштою у базі даних
   const user = await User.findOne({ email });
-  // Якщо є, повертаємо помилку
+
   if (user) {
     return next(new HttpError(409, "Email already in use"));
   }
 
-  // Засолюємо (хешуємо) пороль
   const hashPassword = await bcrypt.hash(password, 10);
 
   const newUser = await User.create({ ...req.body, password: hashPassword });
@@ -32,13 +29,13 @@ const register = async (req, res, next) => {
 const login = async (req, res, next) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
-  // Якщо немає зареєстрованого користувача, повертаємо помилку
+
   if (!user) {
     return next(new HttpError(401, "Email or password is wrong"));
   }
-  // Порівнюємо пороль із запиту із засоленим поролем у базі
+
   const passwordCompare = await bcrypt.compare(password, user.password);
-  // Якщо паролі не збігаються, повертаємо помилку
+
   if (!passwordCompare) {
     return next(new HttpError(401, "Email or password is wrong"));
   }
