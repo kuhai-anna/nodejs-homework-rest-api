@@ -8,13 +8,11 @@ const authenticate = async (req, res, next) => {
   const { authorization = "" } = req.headers;
   const [bearer, token] = authorization.split(" ");
 
-  // Перевірка "Bearer" у headers
-  if (bearer !== "Bearer") {
+  if (bearer !== "Bearer" || !token) {
     return next(new HttpError(401, "Not authorized"));
   }
-  // Перевірка валідності токена
+
   jwt.verify(token, SECRET_KEY, async (err, decode) => {
-    // Перевірка помилок токена: "TokenExpiredError" "JsonWebTokenError"
     if (err) {
       if (
         err.name === "TokenExpiredError" ||
@@ -28,14 +26,13 @@ const authenticate = async (req, res, next) => {
 
     try {
       const { id } = jwt.verify(token, SECRET_KEY);
-      // Перевірка наявності користувача у базі
+
       const user = await User.findById(id);
       if (!user || !user.token || user.token !== token) {
         return next(new HttpError(401, "Not authorized"));
       }
 
       req.user = user;
-      // У разі успішної перевірки
       next();
     } catch (error) {
       return next(new HttpError(401, "Not authorized"));
