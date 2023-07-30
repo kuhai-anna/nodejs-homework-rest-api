@@ -24,7 +24,14 @@ const userSchema = new Schema(
       enum: ["starter", "pro", "business"],
       default: "starter",
     },
-    token: String,
+    token: {
+      type: String,
+      default: "",
+    },
+    avatarURL: {
+      type: String,
+      require: [true, "Add file for account avatar"],
+    },
   },
   { versionKey: false, timestamps: true }
 );
