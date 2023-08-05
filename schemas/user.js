@@ -13,6 +13,12 @@ const registerSchema = Joi.object({
   }),
 });
 
+const emailSchema = Joi.object({
+  email: Joi.string().pattern(emailRegexp).required().messages({
+    "any.required": "Field 'email' is missing",
+  }),
+});
+
 const loginSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required().messages({
     "any.required": "Field 'email' is missing",
@@ -31,4 +37,9 @@ const changeSubscriptionSchema = Joi.object({
     }),
 });
 
-module.exports = { registerSchema, loginSchema, changeSubscriptionSchema };
+module.exports = {
+  registerSchema,
+  emailSchema,
+  loginSchema,
+  changeSubscriptionSchema,
+};
