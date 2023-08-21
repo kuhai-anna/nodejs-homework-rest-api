@@ -32,7 +32,7 @@
 
 # GooseTrack project backend repository
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/svrphoenix/project-group3be)
 
 Цей проєкт містить бекенд для додатку
 [планувальника завдань GooseTrack](https://svrphoenix.github.io/project-group3fe).
