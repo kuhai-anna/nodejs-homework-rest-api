@@ -60,10 +60,8 @@ UI. Ви можете знайти її за цим посиланням
 
 ### Розробники
 
-<a href="https://github.com/ssulphurr" target="_blank" rel="noopener">
+<a href="https://github.com/ssulphurr" target="_blank" rel="noopener" style="border-radius: 50%;">
 	<img src="https://avatars.githubusercontent.com/u/114026438?v=4" alt="Bas Milius Logo" height="60" width="60" style="border-radius: 50%;" />
 </a>
 
 [<img src="https://avatars.githubusercontent.com/u/114026438?v=4" alt="Аватар Розробника 1" width="30" height="30" style="border-radius: 50%;">](https://github.com/ssulphurr)
-
-- [![Аватар Розробника 1](https://avatars.githubusercontent.com/u/114026438?v=4) ](https://github.com/ssulphurr)
