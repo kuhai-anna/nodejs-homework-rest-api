@@ -1,5 +1,5 @@
 <a href="https://svrphoenix.github.io/project-group3fe" target="_blank" rel="noopener">
-	<img src="images/GOOSE 1.png" alt="GooseTrack logo" height="80" width="80" />
+	<img src="images/GOOSE 1.png" alt="GooseTrack logo" height="120" width="120" />
 </a>
 
 ## GoIT Node.js Course Template Homework
