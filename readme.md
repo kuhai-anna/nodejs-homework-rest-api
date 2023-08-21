@@ -1,3 +1,7 @@
+<a href="https://svrphoenix.github.io/project-group3fe" target="_blank" rel="noopener">
+	<img src="images/GOOSE 1.png" alt="GooseTrack logo" height="60" width="60" />
+</a>
+
 ## GoIT Node.js Course Template Homework
 
 Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
@@ -32,7 +36,7 @@
 
 # GooseTrack project backend repository
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=main)](https://github.com/svrphoenix/project-group3be)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/svrphoenix/project-group3be)
 
 Цей проєкт містить бекенд для додатку
 [планувальника завдань GooseTrack](https://svrphoenix.github.io/project-group3fe).
