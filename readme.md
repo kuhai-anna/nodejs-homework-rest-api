@@ -1,7 +1,3 @@
-<a href="https://svrphoenix.github.io/project-group3fe" target="_blank" rel="noopener">
-	<img src="images/GOOSE 1.png" alt="GooseTrack logo" height="120" width="120" />
-</a>
-
 ## GoIT Node.js Course Template Homework
 
 Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
@@ -33,39 +29,3 @@
 - `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
 - `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
 - `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
-
-# GooseTrack project backend repository
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/svrphoenix/project-group3be)
-
-Цей проєкт містить бекенд для додатку
-[планувальника завдань GooseTrack](https://svrphoenix.github.io/project-group3fe).
-Він забезпечує реєстрацію, авторизацію, управління відгуками та завданнями
-користувачів.
-
-### Посилання на фронтенд:
-
-[Планувальник завдань GooseTrack Frontend](https://github.com/svrphoenix/project-group3fe)
-
-### Команди:
-
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запуск виконання перевірки коду з eslint, необхідно
-  виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; запуск тої ж перевірки лінтера, але з автоматичними
-  виправленнями простих помилок
-
-### Документація
-
-Для роботи з проєктом створено документацію ендпоінтів з використанням Swagger
-UI. Ви можете знайти її за цим посиланням
-[посиланням](https://goose-backend.onrender.com/docs/).
-
-### Розробники
-
-<a href="https://github.com/ssulphurr" target="_blank" rel="noopener">
-	<img src="https://avatars.githubusercontent.com/u/114026438?v=4" alt="Bas Milius Logo" height="60" width="60" style="border-radius: 50%" />
-</a>
-
-[<img src="https://avatars.githubusercontent.com/u/114026438?v=4" alt="Аватар Розробника 1" width="30" height="30" style="border-radius: 50%;">](https://github.com/ssulphurr)
